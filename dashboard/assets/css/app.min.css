@@ -4901,11 +4901,51 @@ span.flatpickr-weekday {
 }
 .secondtitless {
     margin: 0 0 0 15px;
+	position: relative;
 }
 .maintitless {
     cursor: pointer;
 }
 .text-right {
     text-align: right;
+}
+.secondtitless .actionbtn ul {
+    list-style: none;
+    padding: 0;
+}
+.secondtitless .actionbtn ul li {
+    display: inline-block;
+    margin: 0 12px 0;
+}
+.secondtitless .actionbtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+	opacity: 0;
+}
+.secondtitless .actionbtn ul li a {
+    display: block;
+    background-color: #1f75f6;
+    color: #fff;
+    padding: 3px 25px;
+    border-radius: 3px;
+	transition: all 0.5s;
+}
+.secondtitless .actionbtn ul li a:hover {
+    background-color: #000000;
+	transition: all 0.5s;
+}
+.secondtitless p {
+    cursor: pointer;
+	transition: all 0.5s;
+}
+.secondtitless p:hover {
+    cursor: pointer;
+	color: #1f75f6;
+	transition: all 0.5s;
+}
+.secondtitless > .row > .col-9:hover .actionbtn {
+    opacity: 1;
+    transition: all 0.5s;
 }
 /*# sourceMappingURL=app.min.css.map */

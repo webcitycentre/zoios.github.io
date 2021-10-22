@@ -4885,5 +4885,21 @@ span.flatpickr-weekday {
 .titlepage .col-md-6:last-child .checkboxs:first-child {
     margin-left: 8px;
 }
-
+.maintitless i {
+    margin: 0 5px 0 0;
+}
+.maintitless p span {
+    position: relative;
+    top: 3px;
+}
+.secondtitless p span {
+    position: relative;
+    top: 3px;
+}
+.secondtitless i {
+    margin: 0 5px 0 0;
+}
+.secondtitless {
+    margin: 0 0 0 15px;
+}
 /*# sourceMappingURL=app.min.css.map */

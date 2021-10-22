@@ -4902,4 +4902,7 @@ span.flatpickr-weekday {
 .secondtitless {
     margin: 0 0 0 15px;
 }
+.maintitless {
+    cursor: pointer;
+}
 /*# sourceMappingURL=app.min.css.map */

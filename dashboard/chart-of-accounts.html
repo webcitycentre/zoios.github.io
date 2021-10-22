@@ -541,35 +541,38 @@
                                <div class="maintitless">
                                   <div class="row">
                                      <div class="col">
-                                        <p><i class="uil-folder"></i> <b><span>Settings</span></b></p>
+                                        <p><i class="uil-folder"></i> <b><span>Asset Accounts</span></b></p>
                                      </div>
                                   </div>
                                </div>
-                               <div class="secondtitless">
+                               <div class="secondtitless" style="display: none;">
                                   <div class="row">
                                      <div class="col">
-                                        <p><i class="uil-folder"></i> <span>Company</span></p>
-                                        <p><i class="uil-folder"></i> <span>Manage roles</span></p>
-                                        <p><i class="uil-folder"></i> <span>Manage users</span></p>
+                                        <p><span class="numbers">101</span> <span>Cash</span></p>
+                                        <p><span class="numbers">102</span> <span>Petty cash</span></p>
+                                        <p><span class="numbers">103</span> <span>Cash equivalents</span></p>
+                                        <p><span class="numbers">104</span> <span>Short-term investments</span></p>
+                                        <p><span class="numbers">106</span> <span>Accounts receivable</span></p>
+                                        <p><span class="numbers">107</span> <span>Allowance for doubtful accounts</span></p>
                                      </div>
                                   </div>
                                </div>
                                <div class="maintitless">
                                   <div class="row">
                                      <div class="col">
-                                        <p><i class="uil-folder"></i> <b><span>Group Company</span></b></p>
+                                        <p><i class="uil-folder"></i> <b><span>Liability Accounts</span></b></p>
                                      </div>
                                   </div>
                                </div>
-                               <div class="secondtitless">
+                               <div class="secondtitless" style="display: none;">
                                   <div class="row">
                                      <div class="col">
-                                        <p><i class="uil-folder"></i> <span>Consolidated Balance Sheet</span></p>
-                                        <p><i class="uil-folder"></i> <span>Consolidated Trial balance</span></p>
-                                        <p><i class="uil-folder"></i> <span>Consolidated Profit & loss A/C</span></p>
-                                        <p><i class="uil-folder"></i> <span>Investments</span></p>
-                                        <p><i class="uil-folder"></i> <span>Expenses</span></p>
-                                        <p><i class="uil-folder"></i> <span>Taxes</span></p>
+                                        <p><span class="numbers">201</span> <span>Accounts payable</span></p>
+                                        <p><span class="numbers">202</span> <span>Insurance payable</span></p>
+                                        <p><span class="numbers">203</span> <span>Interest payable</span></p>
+                                        <p><span class="numbers">204</span> <span>Legal fees payable</span></p>
+                                        <p><span class="numbers">207</span> <span>Office salaries payable</span></p>
+                                        <p><span class="numbers">208</span> <span>Rent payable</span></p>
                                      </div>
                                   </div>
                                </div>
@@ -634,5 +637,21 @@
       <script src="assets/js/pages/dashboard.init.js"></script>
       <!-- App js -->
       <script src="assets/js/app.min.js"></script>
+      <script>
+         var acc = document.getElementsByClassName("maintitless");
+         var i;
+         
+         for (i = 0; i < acc.length; i++) {
+           acc[i].addEventListener("click", function() {
+             this.classList.toggle("active");
+             var panel = this.nextElementSibling;
+             if (panel.style.display === "block") {
+               panel.style.display = "none";
+             } else {
+               panel.style.display = "block";
+             }
+           });
+         }
+         </script>
    </body>
 </html>

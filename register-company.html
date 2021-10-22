@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Zoios | Register Company</title>
+  <link href="static/plugin/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="static/plugin/themify-icons/themify-icons.css" rel="stylesheet">
+  <link href="static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/plugin/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/plugin/magnific/magnific-popup.css" rel="stylesheet">
+  <link href="static/css/styles.css" rel="stylesheet">
+  <link href="static/css/color/default.css" rel="stylesheet" id="color_theme">
+  <link rel="icon" href="static/img/favicon.png" />
+</head>
+<body data-spy="scroll" data-target="#navbar" data-offset="98">
+  <div id="loading">
+    <div class="load-circle"><span class="one"></span></div>
+  </div>
+  <main> 
+    <section class="loginpage">
+      <div class="container">
+        <div class="loginsection">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="logologin">
+                <a href="index.html"><img src="static/img/logo.png"></a>
+              </div>
+            </div>
+            <div class="col-md-10 text-right">
+             <!-- <div class="loginsing">
+                <p><span>Already Have Account? <a href="login.html">Login</a></span></p>
+              </div>-->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="lgoinform">
+                <div class="loginheading text-center">
+                  <h2>Company Register!</h2>
+                </div>
+                <form method="post" action="group-company-erp.html">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                            <select type="text" class="form-control select-form multiselect" multiple="multiple" id="companys" role="multiselect">  
+                                <option value="Company 1">Company 1</option>
+                                <option value="Company 2">Company 2</option>
+                                <option value="Company 3">Company 3</option>
+                                <option value="Company 4">Company 4</option>
+                                <option value="Company 5">Company 5</option>
+                                <option value="Company 6">Company 6</option>
+                                <option value="Company 7">Company 7</option>
+                                <option value="Company 8">Company 8</option>
+                                <option value="Company 9">Company 9</option>
+                                <option value="Company 10">Company 10</option>
+                            </select> 
+                            </div>
+                        </div>
+                        <div class="col-md-12 companynames"></div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control removegapp" name="print_name" placeholder="Print name" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6" id="businessstype">
+                            <div class="form-group">
+                                <select class="form-control select-form" name="country" required>
+                                    <option value="">Select Type of Business</option>
+                                    <option value="Manufacturing">Manufacturing</option>
+                                    <option value="Spare Parts Trading">Spare Parts Trading</option>
+                                    <option value="Training Institute">Training Institute</option>
+                                    <option value="Software Development">Software Development</option>
+                                    <option value="Installation & Maintenance">Installation & Maintenance</option>
+                                    <option value="Consolidated">Consolidated</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                  <input type="text" name="description" placeholder="Description" class="form-control removegapp" >
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="checkbox" id="gstd" name="gstd" value="gst">
+                                <label for="gstd"> Enable GST (India) Features</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6" id="gstform">
+                            <div class="form-group">
+                                <label for="gstnumber">GSTIN Number</label>
+                                <input type="text" id="gstnumber" name="gstnumber" placeholder="GSTIN Number" class="form-control removegapp">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Accounting Year Start On:</label>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label>Year</label>
+                                        <input type="number" min="1999" max="2099" step="1" class="form-control removegapp" name="year">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Month</label>
+                                        <select class="form-control select-form" name="month" required>
+                                            <option value="">Select Month</option>
+                                            <option value="January">January</option>
+                                            <option value="February">February</option>
+                                            <option value="March">March</option>
+                                            <option value="April">April</option>
+                                            <option value="May">May</option>
+                                            <option value="June">June</option>
+                                            <option value="July">July</option>
+                                            <option value="August">August</option>
+                                            <option value="September">September</option>
+                                            <option value="October">October</option>
+                                            <option value="November">November</option>
+                                            <option value="December">December</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label>Account Book Start On</label>
+                                        <input type="text" class="form-control removegapp" name="bookstart">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="seprbox">
+                                <div class="sepboxheading">
+                                    <h4>Administrator Password</h4>
+                                </div>
+                                <div class="passwordss">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Password</label>
+                                                <input type="password" placeholder="Password" name="password" class="form-control removegapp">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Confirm Password</label>
+                                                <input type="password" placeholder="Confirm Password" name="cpassword" class="form-control removegapp">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="seprbox">
+                                <div class="sepboxheading">
+                                    <h4>Currency</h4>
+                                </div>
+                                <div class="passwordss">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Number of Decimal Places In Currency</label>
+                                                <input type="number" min="1" name="places" class="form-control removegapp">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Heigher Denomination (Rs.)</label>
+                                                <input type="number" placeholder="Rs." name="heigher" class="form-control removegapp">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label>Lower Denomination (Paise)</label>
+                                                <input type="number" placeholder="Paise" name="Lower" class="form-control removegapp">
+                                                <p>1 Rs. = 100 Paise</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="seprbox">
+                                <div class="sepboxheading">
+                                    <h4>Address</h4>
+                                </div>
+                                <div class="passwordss">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Line 1</label>
+                                                <input type="text" placeholder="Line 1" name="line1" class="form-control removegapp">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label>Line 2</label>
+                                                <input type="text" placeholder="Line 1" name="line2" class="form-control removegapp">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>City</label>
+                                                <input type="text" placeholder="City" name="city" class="form-control removegapp">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>State</label>
+                                                <select class="form-control select-form" name="state" required>
+                                                    <option value="">Select State</option>
+                                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                    <option value="Assam">Assam</option>
+                                                    <option value="Bihar">Bihar</option>
+                                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                                    <option value="Goa">Goa</option>
+                                                    <option value="Gujarat">Gujarat</option>
+                                                    <option value="Haryana">Haryana</option>
+                                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                                    <option value="Jharkhand">Jharkhand</option>
+                                                    <option value="Karnataka">Karnataka</option>
+                                                    <option value="Kerala">Kerala</option>
+                                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                                    <option value="Maharashtra">Maharashtra</option>
+                                                    <option value="Manipur">Manipur</option>
+                                                    <option value="Meghalaya">Meghalaya</option>
+                                                    <option value="Mizoram">Mizoram</option>
+                                                    <option value="Nagaland">Nagaland</option>
+                                                    <option value="Odisha">Odisha</option>
+                                                    <option value="Punjab">Punjab</option>
+                                                    <option value="Rajasthan">Rajasthan</option>
+                                                    <option value="Sikkim">Sikkim</option>
+                                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                                    <option value="Telangana">Telangana</option>
+                                                    <option value="Tripura">Tripura</option>
+                                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                                    <option value="Uttarakhand">Uttarakhand</option>
+                                                    <option value="West Bengal">West Bengal</option>
+                                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                                    <option value="Chandigarh">Chandigarh</option>
+                                                    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                                                    <option value="Delhi">Delhi</option>
+                                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                                    <option value="Ladakh">Ladakh</option>
+                                                    <option value="Lakshadweep">Lakshadweep</option>
+                                                    <option value="Puducherry">Puducherry</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Pin/Zip Code</label>
+                                                <input type="number" min="1" placeholder="Pin/Zip Code" name="Zip" class="form-control removegapp">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label>Country</label>
+                                                <input type="text" placeholder="Country" name="country" class="form-control removegapp">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                              <button type="submit" class="form-submitbtn"><span id="texchnage">Submit</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    </section>
+  </main>
+  <!-- Main End -->
+
+  
+
+  <!-- jQuery -->
+  <script src="static/js/jquery-3.2.1.min.js"></script>
+  <script src="static/js/jquery-migrate-3.0.0.min.js"></script>
+  <script src="static/plugin/bootstrap/js/popper.min.js"></script>
+  <script src="static/plugin/bootstrap/js/bootstrap.min.js"></script>
+  <script src="static/plugin/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="static/plugin/magnific/jquery.magnific-popup.min.js"></script>
+  <script src="static/plugin/particles/particles.min.js"></script>
+  <script src="static/plugin/particles/particles-app.js"></script>
+  <script src="static/js/custom.js"></script>
+  <script src="static/js/form.js"></script>
+  <script>
+     jQuery(document).ready(function($) {
+   $('#gstd').change(function(){
+        if ($(this).is(':checked')) $('#gstform').show(100);
+        else $('#gstform').hide(100);
+    }).change();
+});
+//var total = $("#companys :selected").length;
+$('#companys').change(function(){
+    var total = $("#companys :not(:selected)").length;
+    //alert(total);
+    //alert($(this).val().length);
+    var wrapper = $('.companynames'); 
+    var fieldHTML = '<div class="form-group"><input type="text" class="form-control removegapp" name="companyname[]" placeholder="Company name" required></div>';
+    var x = $(this).val().length; 
+    if(x < total){
+      //alert("plus"); die;
+      x++; 
+      $(wrapper).append(fieldHTML);
+    } else if(x > total) {
+      alert("neg"); die;
+      $(this).parent('div').remove(); 
+        x--;
+    }
+  })
+    </script>
+</body>
+</html>

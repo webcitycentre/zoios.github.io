@@ -1,0 +1,1964 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <title>Dashboard | Zoios</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <!-- App favicon -->
+      <link rel="shortcut icon" href="assets/images/favicon.png">
+      <!-- plugins -->
+      <link href="assets/libs/flatpickr/flatpickr.min.css" rel="stylesheet" type="text/css" />
+      <!-- third party css -->
+      <link href="assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+      <link href="assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+      <link href="assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+      <link href="assets/libs/datatables.net-select-bs4/css/select.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+      <!-- third party css end -->
+      <!-- App css -->
+      <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+      <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+      <link href="assets/css/bootstrap-dark.min.css" rel="stylesheet" type="text/css" id="bs-dark-stylesheet" disabled />
+      <link href="assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet"  disabled />
+      <!-- icons -->
+      <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+   </head>
+   <body class="loading" data-layout='{"mode": "light", "width": "fluid", "menuPosition": "fixed", "sidebar": { "color": "light", "size": "default", "showuser": false}, "topbar": {"color": "light"}, "showRightSidebarOnPageLoad": true}'>
+      <!-- Begin page -->
+      <div id="wrapper">
+         <!-- Topbar Start -->
+         <div class="navbar-custom">
+            <div class="container-fluid">
+               <ul class="list-unstyled topnav-menu float-end mb-0">
+                  <li class="d-none d-lg-block">
+                     <form class="app-search">
+                        <div class="app-search-box dropdown">
+                           <div class="input-group">
+                              <input type="search" class="form-control" placeholder="Search..." id="top-search">
+                              <button class="btn input-group-text" type="submit">
+                              <i class="uil uil-search"></i>
+                              </button>
+                           </div>
+                           <div class="dropdown-menu dropdown-lg" id="search-dropdown">
+                              <!-- item-->
+                              <div class="dropdown-header noti-title">
+                                 <h5 class="text-overflow mb-2">Found 05 results</h5>
+                              </div>
+                              <!-- item-->
+                              <a href="javascript:void(0);" class="dropdown-item notify-item">
+                              <i class="uil uil-sliders-v-alt me-1"></i>
+                              <span>User profile settings</span>
+                              </a>
+                              <!-- item-->
+                              <a href="javascript:void(0);" class="dropdown-item notify-item">
+                              <i class="uil uil-home-alt me-1"></i>
+                              <span>Analytics Report</span>
+                              </a>
+                              <!-- item-->
+                              <a href="javascript:void(0);" class="dropdown-item notify-item">
+                              <i class="uil uil-life-ring me-1"></i>
+                              <span>How can I help you?</span>
+                              </a>
+                              <!-- item-->
+                              <div class="dropdown-header noti-title">
+                                 <h6 class="text-overflow mb-2 text-uppercase">Users</h6>
+                              </div>
+                              <div class="notification-list">
+                                 <!-- item-->
+                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="d-flex text-align-start">
+                                       <img class="me-2 rounded-circle" src="assets/images/users/avatar-2.jpg" alt="Generic placeholder image" height="32">
+                                       <div class="flex-grow-1">
+                                          <h5 class="m-0 fs-14">Shirley Miller</h5>
+                                          <span class="fs-12 mb-0">UI Designer</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                                 <!-- item-->
+                                 <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                    <div class="d-flex text-align-start">
+                                       <img class="me-2 rounded-circle" src="assets/images/users/avatar-5.jpg" alt="Generic placeholder image" height="32">
+                                       <div class="flex-grow-1">
+                                          <h5 class="m-0 fs-14">Timothy Moreno</h5>
+                                          <span class="fs-12 mb-0">Frontend Developer</span>
+                                       </div>
+                                    </div>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+                  </li>
+                  <li class="dropdown d-inline-block d-lg-none">
+                     <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                     <i data-feather="search"></i>
+                     </a>
+                     <div class="dropdown-menu dropdown-lg dropdown-menu-end p-0">
+                        <form class="p-3">
+                           <input type="text" class="form-control" placeholder="Search ..." aria-label="search here">
+                        </form>
+                     </div>
+                  </li>
+                  <li class="dropdown d-none d-lg-inline-block">
+                     <a class="nav-link dropdown-toggle arrow-none" data-toggle="fullscreen" href="#">
+                     <i data-feather="maximize"></i>
+                     </a>
+                  </li>
+                  <li class="dropdown d-none d-lg-inline-block topbar-dropdown">
+                     <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                     <i data-feather="globe"></i>
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item">
+                        <img src="assets/images/flags/us.jpg" alt="user-image" class="me-1" height="12"> 
+                        <span class="align-middle">English</span>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item">
+                        <img src="assets/images/flags/germany.jpg" alt="user-image" class="me-1" height="12"> 
+                        <span class="align-middle">German</span>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item">
+                        <img src="assets/images/flags/italy.jpg" alt="user-image" class="me-1" height="12"> 
+                        <span class="align-middle">Italian</span>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item">
+                        <img src="assets/images/flags/spain.jpg" alt="user-image" class="me-1" height="12"> 
+                        <span class="align-middle">Spanish</span>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item">
+                        <img src="assets/images/flags/russia.jpg" alt="user-image" class="me-1" height="12"> 
+                        <span class="align-middle">Russian</span>
+                        </a>
+                     </div>
+                  </li>
+                  <li class="dropdown notification-list topbar-dropdown">
+                     <a class="nav-link dropdown-toggle position-relative" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                     <i data-feather="bell"></i>
+                     <span class="badge bg-danger rounded-circle noti-icon-badge">6</span>
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-end dropdown-lg">
+                        <!-- item-->
+                        <div class="dropdown-item noti-title">
+                           <h5 class="m-0">
+                              <span class="float-end">
+                              <a href="#" class="text-dark"><small>Clear All</small></a>
+                              </span>Notification
+                           </h5>
+                        </div>
+                        <div class="noti-scroll" data-simplebar>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom">
+                              <div class="notify-icon bg-primary"><i class="uil uil-user-plus"></i></div>
+                              <p class="notify-details">New user registered.<small class="text-muted">5 hours ago</small>
+                              </p>
+                           </a>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom">
+                              <div class="notify-icon">
+                                 <img src="assets/images/users/avatar-1.jpg" class="img-fluid rounded-circle" alt="" />
+                              </div>
+                              <p class="notify-details">Karen Robinson</p>
+                              <p class="text-muted mb-0 user-msg">
+                                 <small>Wow ! this admin looks good and awesome design</small>
+                              </p>
+                           </a>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom">
+                              <div class="notify-icon">
+                                 <img src="assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" />
+                              </div>
+                              <p class="notify-details">Cristina Pride</p>
+                              <p class="text-muted mb-0 user-msg">
+                                 <small>Hi, How are you? What about our next meeting</small>
+                              </p>
+                           </a>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom active">
+                              <div class="notify-icon bg-success"><i class="uil uil-comment-message"></i> </div>
+                              <p class="notify-details">
+                                 Jaclyn Brunswick commented on Dashboard<small class="text-muted">1 min ago</small>
+                              </p>
+                           </a>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item border-bottom">
+                              <div class="notify-icon bg-danger"><i class="uil uil-comment-message"></i></div>
+                              <p class="notify-details">
+                                 Caleb Flakelar commented on Admin<small class="text-muted">4 days ago</small>
+                              </p>
+                           </a>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item">
+                              <div class="notify-icon bg-primary">
+                                 <i class="uil uil-heart"></i>
+                              </div>
+                              <p class="notify-details">
+                                 Carlos Crouch liked <b>Admin</b> <small class="text-muted">13 days ago</small>
+                              </p>
+                           </a>
+                        </div>
+                        <!-- All-->
+                        <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                        View all <i class="fe-arrow-right"></i>
+                        </a>
+                     </div>
+                  </li>
+                  <li class="dropdown notification-list topbar-dropdown">
+                     <a class="nav-link dropdown-toggle nav-user me-0" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                     <img src="assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                     <span class="pro-user-name ms-1">
+                     Admin <i class="uil uil-angle-down"></i> 
+                     </span>
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
+                        <!-- item-->
+                        <div class="dropdown-header noti-title">
+                           <h6 class="text-overflow m-0">Welcome !</h6>
+                        </div>
+                        <a href="#" class="dropdown-item notify-item">
+                        <i data-feather="user" class="icon-dual icon-xs me-1"></i><span>My Account</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item notify-item">
+                        <i data-feather="log-out" class="icon-dual icon-xs me-1"></i><span>Logout</span>
+                        </a>
+                     </div>
+                  </li>
+                  <li class="dropdown d-none d-lg-inline-block topbar-dropdown">
+                     <a class="nav-link dropdown-toggle arrow-none" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                     <i data-feather="settings"></i>
+                     </a>
+                     <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item">
+                        <span class="align-middle">Company</span>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item">
+                        <span class="align-middle">Manage user </span>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item">
+                        <span class="align-middle">Manage roles </span>
+                        </a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item"> 
+                        <span class="align-middle">Chart of accounts</span>
+                        </a>
+                     </div>
+                  </li>
+               </ul>
+               <!-- LOGO -->
+               <div class="logo-box">
+                  <a href="index.html" class="logo logo-dark">
+                     <span class="logo-sm">
+                        <img src="assets/images/favicon.png" alt="" height="24">
+                        <!-- <span class="logo-lg-text-light">Shreyu</span> -->
+                     </span>
+                     <span class="logo-lg">
+                        <img src="assets/images/zoios.png" alt="" height="50">
+                        <!-- <span class="logo-lg-text-light">S</span> -->
+                     </span>
+                  </a>
+               </div>
+               <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                  <li>
+                     <button class="button-menu-mobile">
+                     <i data-feather="menu"></i>
+                     </button>
+                  </li>
+                  <li>
+                     <!-- Mobile menu toggle (Horizontal Layout)-->
+                     <a class="navbar-toggle nav-link" data-bs-toggle="collapse" data-bs-target="#topnav-menu-content">
+                        <div class="lines">
+                           <span></span>
+                           <span></span>
+                           <span></span>
+                        </div>
+                     </a>
+                     <!-- End mobile menu toggle-->
+                  </li>
+               </ul>
+               <div class="clearfix"></div>
+            </div>
+         </div>
+         <!-- end Topbar -->
+         <!-- ========== Left Sidebar Start ========== -->
+         <div class="left-side-menu">
+            <div class="h-100" data-simplebar>
+               <!--- Sidemenu -->
+               <div id="sidebar-menu">
+                  <ul id="side-menu">
+                     <!-- <li class="menu-title">Navigation</li> -->
+                     <li>
+                        <a href="index.html">
+                        <i data-feather="home"></i>
+                        <span> Dashboards </span>
+                        </a>
+                     </li>
+                     <li class="menu-title mt-2">Apps</li>
+                     <li>
+                        <a href="#sidebarEmail" data-bs-toggle="collapse">
+                        <i data-feather="mail"></i>
+                        <span> Zoios email </span>
+                        <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="sidebarEmail">
+                           <ul class="nav-second-level">
+                              <li><a href="#">Inbox</a></li>
+                              <li><a href="#">Read Email</a></li>
+                              <li><a href="#">Compose Email</a></li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li>
+                        <a href="#sidebarerp" data-bs-toggle="collapse">
+                        <i data-feather="calendar"></i>
+                        <span> Zoios ERP </span>
+                        <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="sidebarerp">
+                           <ul class="nav-second-level">
+                              <li>
+                                 <a href="#erpsettings" data-bs-toggle="collapse">
+                                 Settings <span class="menu-arrow"></span>
+                                 </a>
+                                 <div class="collapse" id="erpsettings">
+                                    <ul class="nav-second-level">
+                                       <li><a href="company.html">Company</a></li>
+                                       <li><a href="manage-roles.html">Manage roles</a></li>
+                                       <li><a href="manage-users.html">Manage user</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li>
+                                 <a href="#erpgcompany" data-bs-toggle="collapse">
+                                 Group Company <span class="menu-arrow"></span>
+                                 </a>
+                                 <div class="collapse" id="erpgcompany">
+                                    <ul class="nav-second-level">
+                                       <li><a href="#">Consolidated Balance Sheet</a></li>
+                                       <li><a href="#">Consolidated Trial balance</a></li>
+                                       <li><a href="#">Consolidated Profit & loss A/C</a></li>
+                                       <li><a href="#">Investments</a></li>
+                                       <li><a href="#">Expenses</a></li>
+                                       <li><a href="#">Taxes</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li>
+                                 <a href="#erpaccount" data-bs-toggle="collapse">
+                                 Accounts <span class="menu-arrow"></span>
+                                 </a>
+                                 <div class="collapse" id="erpaccount">
+                                    <ul class="nav-second-level">
+                                       <li><a href="#">Chart of accounts</a></li>
+                                       <li><a href="#">Assets</a></li>
+                                       <li><a href="#">Expenses</a></li>
+                                       <li><a href="#">Payment</a></li>
+                                       <li><a href="#">Receipt</a></li>
+                                       <li><a href="#">Journal</a></li>
+                                       <li><a href="#">Bank</a></li>
+                                       <li><a href="#">Cash</a></li>
+                                       <li><a href="#">Trial Balance</a></li>
+                                       <li><a href="#">Balance sheet</a></li>
+                                       <li><a href="#">Profit & Loss Account</a></li>
+                                       <li><a href="#">Taxes</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li>
+                                 <a href="#erpsales" data-bs-toggle="collapse">
+                                 Sales <span class="menu-arrow"></span>
+                                 </a>
+                                 <div class="collapse" id="erpsales">
+                                    <ul class="nav-second-level">
+                                       <li><a href="#">Customer</a></li>
+                                       <li><a href="#">Sales order</a></li>
+                                       <li><a href="#">Sales</a></li>
+                                       <li><a href="#">Sales Return</a></li>
+                                       <li><a href="#">Sales price</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li>
+                                 <a href="#erppurchase" data-bs-toggle="collapse">
+                                 Purchase <span class="menu-arrow"></span>
+                                 </a>
+                                 <div class="collapse" id="erppurchase">
+                                    <ul class="nav-second-level">
+                                       <li><a href="#">Supplier</a></li>
+                                       <li><a href="#">Purchase Order</a></li>
+                                       <li><a href="#">Purchase</a></li>
+                                       <li><a href="#">Purchase Return</a></li>
+                                       <li><a href="#">Purchase Price</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li>
+                                 <a href="#erpinventory" data-bs-toggle="collapse">
+                                 Inventory <span class="menu-arrow"></span>
+                                 </a>
+                                 <div class="collapse" id="erpinventory">
+                                    <ul class="nav-second-level">
+                                       <li><a href="#">Stock</a></li>
+                                       <li><a href="#">Item group</a></li>
+                                       <li><a href="#">Item</a></li>
+                                       <li><a href="#">Godown</a></li>
+                                       <li><a href="#">Delivery note</a></li>
+                                       <li><a href="#">Packing list</a></li>
+                                       <li><a href="#">Purchase In</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li>
+                                 <a href="#erpInstallation" data-bs-toggle="collapse">
+                                 Installation <span class="menu-arrow"></span>
+                                 </a>
+                                 <div class="collapse" id="erpInstallation">
+                                    <ul class="nav-second-level">
+                                       <li><a href="#">Projects</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li>
+                                 <a href="#erpMaintenance" data-bs-toggle="collapse">
+                                 Maintenance  <span class="menu-arrow"></span>
+                                 </a>
+                                 <div class="collapse" id="erpMaintenance">
+                                    <ul class="nav-second-level">
+                                       <li><a href="#">Contracts / AMC</a></li>
+                                       <li><a href="#">Call Back</a></li>
+                                       <li><a href="#">Renovation contracts</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li>
+                                 <a href="#erpManufacturing" data-bs-toggle="collapse">
+                                 Manufacturing <span class="menu-arrow"></span>
+                                 </a>
+                                 <div class="collapse" id="erpManufacturing">
+                                    <ul class="nav-second-level">
+                                       <li><a href="#">BOM</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li>
+                                 <a href="#erphuman" data-bs-toggle="collapse">
+                                 Human Resources <span class="menu-arrow"></span>
+                                 </a>
+                                 <div class="collapse" id="erphuman">
+                                    <ul class="nav-second-level">
+                                       <li><a href="#">Employee Details</a></li>
+                                       <li><a href="#">Leave Salary</a></li>
+                                       <li><a href="#">Service</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li>
+                                 <a href="#erphuman" data-bs-toggle="collapse">
+                                 Training Institute <span class="menu-arrow"></span>
+                                 </a>
+                                 <div class="collapse" id="erphuman">
+                                    <ul class="nav-second-level">
+                                       <li><a href="#">Students</a></li>
+                                       <li><a href="#">Courses</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li>
+                                 <a href="#erpsoft" data-bs-toggle="collapse">
+                                 Software development <span class="menu-arrow"></span>
+                                 </a>
+                                 <div class="collapse" id="erpsoft">
+                                    <ul class="nav-second-level">
+                                       <li><a href="#">contracts</a></li>
+                                    </ul>
+                                 </div>
+                              </li>
+                              <li><a href="#">Budgeting</a></li>
+                           </ul>
+                        </div>
+                     </li>
+                     <li>
+                        <a href="#">
+                        <i data-feather="message-square"></i>
+                        <span> Zoios drive </span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                        <i data-feather="briefcase"></i>
+                        <span> Zoios office </span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="#">
+                        <i data-feather="clipboard"></i>
+                        <span> Zoios cloud telephony </span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+               <!-- End Sidebar -->
+               <div class="clearfix"></div>
+            </div>
+            <!-- Sidebar -left -->
+         </div>
+         <!-- Left Sidebar End -->
+         <!-- ============================================================== -->
+         <!-- Start Page Content here -->
+         <!-- ============================================================== -->
+         <div class="content-page">
+            <div class="content">
+               <!-- Start Content-->
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="page-title-box">
+                           <h4 class="page-title">Add Roles</h4>
+                           <div class="page-title-right">
+                              <ol class="breadcrumb m-0">
+                                 <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                 <li class="breadcrumb-item active">Add Roles</li>
+                              </ol>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-12">
+                        <div class="page-title-box">
+                           <p class="page-title"></p>
+                           <div class="page-title-right">
+                              <ol class="breadcrumb m-0">
+                                 <li><button type="button" class="btn btn-primary" onclick="document.location='manage-roles.html'">View Roles</button></li>
+                              </ol>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- end page title -->  
+                  <form method="post" action="" class="form-horizontal">
+                     <div class="row">
+                        <div class="col-9">
+                           <div class="card">
+                              <div class="card-body">
+                                 <div class="mb-3 row">
+                                    <label class="col-lg-12 col-form-label" for="name">Name</label>
+                                    <div class="col-lg-12">
+                                       <input type="text" id="name" name="name" class="form-control" placeholder="Name">
+                                    </div>
+                                 </div>
+                                 <div class="titlepage">
+                                     <div class="row">
+                                         <div class="col-md-12">
+                                             <p><b>Settings</b></p>
+                                         </div>
+                                     </div>
+                                 </div>
+                                 <div class="firstlabel">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p>Company</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <div class="form-group checkboxs">
+                                              <input type="checkbox" id="View" name="View" value="1" checked>
+                                              <label for="View"> View</label>
+                                          </div>
+                                          <div class="form-group checkboxs">
+                                              <input type="checkbox" id="Add" name="Add" value="2">
+                                              <label for="Add"> Add</label>
+                                          </div>
+                                          <div class="form-group checkboxs">
+                                              <input type="checkbox" id="Edit" name="Edit" value="3">
+                                              <label for="Edit"> Edit</label>
+                                          </div>
+                                          <div class="form-group checkboxs">
+                                              <input type="checkbox" id="Delete" name="Delete" value="4">
+                                              <label for="Delete"> Delete</label>
+                                          </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="firstlabel">
+                                   <div class="row">
+                                       <div class="col-lg-6">
+                                           <p>Manage roles</p>
+                                       </div>
+                                       <div class="col-md-6">
+                                         <div class="form-group checkboxs">
+                                             <input type="checkbox" id="View" name="View" value="1" checked>
+                                             <label for="View"> View</label>
+                                         </div>
+                                         <div class="form-group checkboxs">
+                                             <input type="checkbox" id="Add" name="Add" value="2">
+                                             <label for="Add"> Add</label>
+                                         </div>
+                                         <div class="form-group checkboxs">
+                                             <input type="checkbox" id="Edit" name="Edit" value="3">
+                                             <label for="Edit"> Edit</label>
+                                         </div>
+                                         <div class="form-group checkboxs">
+                                             <input type="checkbox" id="Delete" name="Delete" value="4">
+                                             <label for="Delete"> Delete</label>
+                                         </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="firstlabel">
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <p>Manage users</p>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div class="form-group checkboxs">
+                                            <input type="checkbox" id="View" name="View" value="1" checked>
+                                            <label for="View"> View</label>
+                                        </div>
+                                        <div class="form-group checkboxs">
+                                            <input type="checkbox" id="Add" name="Add" value="2">
+                                            <label for="Add"> Add</label>
+                                        </div>
+                                        <div class="form-group checkboxs">
+                                            <input type="checkbox" id="Edit" name="Edit" value="3">
+                                            <label for="Edit"> Edit</label>
+                                        </div>
+                                        <div class="form-group checkboxs">
+                                            <input type="checkbox" id="Delete" name="Delete" value="4">
+                                            <label for="Delete"> Delete</label>
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="titlepage">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <p><b>Group Company</b></p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="firstlabel">
+                                 <div class="row">
+                                     <div class="col-lg-6">
+                                         <p>Consolidated Balance Sheet</p>
+                                     </div>
+                                     <div class="col-md-6">
+                                       <div class="form-group checkboxs">
+                                           <input type="checkbox" id="View" name="View" value="1" checked>
+                                           <label for="View"> View</label>
+                                       </div>
+                                       <div class="form-group checkboxs">
+                                           <input type="checkbox" id="Add" name="Add" value="2">
+                                           <label for="Add"> Add</label>
+                                       </div>
+                                       <div class="form-group checkboxs">
+                                           <input type="checkbox" id="Edit" name="Edit" value="3">
+                                           <label for="Edit"> Edit</label>
+                                       </div>
+                                       <div class="form-group checkboxs">
+                                           <input type="checkbox" id="Delete" name="Delete" value="4">
+                                           <label for="Delete"> Delete</label>
+                                       </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="firstlabel">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <p>Consolidated Trial balance</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="View" name="View" value="1" checked>
+                                          <label for="View"> View</label>
+                                      </div>
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="Add" name="Add" value="2">
+                                          <label for="Add"> Add</label>
+                                      </div>
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="Edit" name="Edit" value="3">
+                                          <label for="Edit"> Edit</label>
+                                      </div>
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="Delete" name="Delete" value="4">
+                                          <label for="Delete"> Delete</label>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstlabel">
+                               <div class="row">
+                                   <div class="col-lg-6">
+                                       <p>Consolidated Profit & loss A/C</p>
+                                   </div>
+                                   <div class="col-md-6">
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="View" name="View" value="1" checked>
+                                         <label for="View"> View</label>
+                                     </div>
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="Add" name="Add" value="2">
+                                         <label for="Add"> Add</label>
+                                     </div>
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="Edit" name="Edit" value="3">
+                                         <label for="Edit"> Edit</label>
+                                     </div>
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="Delete" name="Delete" value="4">
+                                         <label for="Delete"> Delete</label>
+                                     </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="firstlabel">
+                              <div class="row">
+                                  <div class="col-lg-6">
+                                      <p>Investments</p>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group checkboxs">
+                                        <input type="checkbox" id="View" name="View" value="1" checked>
+                                        <label for="View"> View</label>
+                                    </div>
+                                    <div class="form-group checkboxs">
+                                        <input type="checkbox" id="Add" name="Add" value="2">
+                                        <label for="Add"> Add</label>
+                                    </div>
+                                    <div class="form-group checkboxs">
+                                        <input type="checkbox" id="Edit" name="Edit" value="3">
+                                        <label for="Edit"> Edit</label>
+                                    </div>
+                                    <div class="form-group checkboxs">
+                                        <input type="checkbox" id="Delete" name="Delete" value="4">
+                                        <label for="Delete"> Delete</label>
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="firstlabel">
+                               <div class="row">
+                                   <div class="col-lg-6">
+                                       <p>Expenses</p>
+                                   </div>
+                                   <div class="col-md-6">
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="View" name="View" value="1" checked>
+                                         <label for="View"> View</label>
+                                     </div>
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="Add" name="Add" value="2">
+                                         <label for="Add"> Add</label>
+                                     </div>
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="Edit" name="Edit" value="3">
+                                         <label for="Edit"> Edit</label>
+                                     </div>
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="Delete" name="Delete" value="4">
+                                         <label for="Delete"> Delete</label>
+                                     </div>
+                                   </div>
+                               </div>
+                             </div>
+                             <div class="firstlabel">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <p>Taxes</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="View" name="View" value="1" checked>
+                                          <label for="View"> View</label>
+                                      </div>
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="Add" name="Add" value="2">
+                                          <label for="Add"> Add</label>
+                                      </div>
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="Edit" name="Edit" value="3">
+                                          <label for="Edit"> Edit</label>
+                                      </div>
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="Delete" name="Delete" value="4">
+                                          <label for="Delete"> Delete</label>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="titlepage">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <p><b>Accounts</b></p>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="firstlabel">
+                                 <div class="row">
+                                     <div class="col-lg-6">
+                                         <p>Chart of accounts</p>
+                                     </div>
+                                     <div class="col-md-6">
+                                       <div class="form-group checkboxs">
+                                           <input type="checkbox" id="View" name="View" value="1" checked>
+                                           <label for="View"> View</label>
+                                       </div>
+                                       <div class="form-group checkboxs">
+                                           <input type="checkbox" id="Add" name="Add" value="2">
+                                           <label for="Add"> Add</label>
+                                       </div>
+                                       <div class="form-group checkboxs">
+                                           <input type="checkbox" id="Edit" name="Edit" value="3">
+                                           <label for="Edit"> Edit</label>
+                                       </div>
+                                       <div class="form-group checkboxs">
+                                           <input type="checkbox" id="Delete" name="Delete" value="4">
+                                           <label for="Delete"> Delete</label>
+                                       </div>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="firstlabel">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <p>Payment</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="View" name="View" value="1" checked>
+                                          <label for="View"> View</label>
+                                      </div>
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="Add" name="Add" value="2">
+                                          <label for="Add"> Add</label>
+                                      </div>
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="Edit" name="Edit" value="3">
+                                          <label for="Edit"> Edit</label>
+                                      </div>
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="Delete" name="Delete" value="4">
+                                          <label for="Delete"> Delete</label>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="firstlabel">
+                               <div class="row">
+                                   <div class="col-lg-6">
+                                       <p>Receipt</p>
+                                   </div>
+                                   <div class="col-md-6">
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="View" name="View" value="1" checked>
+                                         <label for="View"> View</label>
+                                     </div>
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="Add" name="Add" value="2">
+                                         <label for="Add"> Add</label>
+                                     </div>
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="Edit" name="Edit" value="3">
+                                         <label for="Edit"> Edit</label>
+                                     </div>
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="Delete" name="Delete" value="4">
+                                         <label for="Delete"> Delete</label>
+                                     </div>
+                                   </div>
+                               </div>
+                           </div>
+                           <div class="firstlabel">
+                              <div class="row">
+                                  <div class="col-lg-6">
+                                      <p>Journal</p>
+                                  </div>
+                                  <div class="col-md-6">
+                                    <div class="form-group checkboxs">
+                                        <input type="checkbox" id="View" name="View" value="1" checked>
+                                        <label for="View"> View</label>
+                                    </div>
+                                    <div class="form-group checkboxs">
+                                        <input type="checkbox" id="Add" name="Add" value="2">
+                                        <label for="Add"> Add</label>
+                                    </div>
+                                    <div class="form-group checkboxs">
+                                        <input type="checkbox" id="Edit" name="Edit" value="3">
+                                        <label for="Edit"> Edit</label>
+                                    </div>
+                                    <div class="form-group checkboxs">
+                                        <input type="checkbox" id="Delete" name="Delete" value="4">
+                                        <label for="Delete"> Delete</label>
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                            <div class="firstlabel">
+                               <div class="row">
+                                   <div class="col-lg-6">
+                                       <p>Bank</p>
+                                   </div>
+                                   <div class="col-md-6">
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="View" name="View" value="1" checked>
+                                         <label for="View"> View</label>
+                                     </div>
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="Add" name="Add" value="2">
+                                         <label for="Add"> Add</label>
+                                     </div>
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="Edit" name="Edit" value="3">
+                                         <label for="Edit"> Edit</label>
+                                     </div>
+                                     <div class="form-group checkboxs">
+                                         <input type="checkbox" id="Delete" name="Delete" value="4">
+                                         <label for="Delete"> Delete</label>
+                                     </div>
+                                   </div>
+                               </div>
+                             </div>
+                             <div class="firstlabel">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <p>Cash</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="View" name="View" value="1" checked>
+                                          <label for="View"> View</label>
+                                      </div>
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="Add" name="Add" value="2">
+                                          <label for="Add"> Add</label>
+                                      </div>
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="Edit" name="Edit" value="3">
+                                          <label for="Edit"> Edit</label>
+                                      </div>
+                                      <div class="form-group checkboxs">
+                                          <input type="checkbox" id="Delete" name="Delete" value="4">
+                                          <label for="Delete"> Delete</label>
+                                      </div>
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="firstlabel">
+                                 <div class="row">
+                                     <div class="col-lg-6">
+                                         <p>Trial Balance</p>
+                                     </div>
+                                     <div class="col-md-6">
+                                       <div class="form-group checkboxs">
+                                           <input type="checkbox" id="View" name="View" value="1" checked>
+                                           <label for="View"> View</label>
+                                       </div>
+                                       <div class="form-group checkboxs">
+                                           <input type="checkbox" id="Add" name="Add" value="2">
+                                           <label for="Add"> Add</label>
+                                       </div>
+                                       <div class="form-group checkboxs">
+                                           <input type="checkbox" id="Edit" name="Edit" value="3">
+                                           <label for="Edit"> Edit</label>
+                                       </div>
+                                       <div class="form-group checkboxs">
+                                           <input type="checkbox" id="Delete" name="Delete" value="4">
+                                           <label for="Delete"> Delete</label>
+                                       </div>
+                                     </div>
+                                 </div>
+                               </div>
+                               <div class="firstlabel">
+                                  <div class="row">
+                                      <div class="col-lg-6">
+                                          <p>Balance sheet</p>
+                                      </div>
+                                      <div class="col-md-6">
+                                        <div class="form-group checkboxs">
+                                            <input type="checkbox" id="View" name="View" value="1" checked>
+                                            <label for="View"> View</label>
+                                        </div>
+                                        <div class="form-group checkboxs">
+                                            <input type="checkbox" id="Add" name="Add" value="2">
+                                            <label for="Add"> Add</label>
+                                        </div>
+                                        <div class="form-group checkboxs">
+                                            <input type="checkbox" id="Edit" name="Edit" value="3">
+                                            <label for="Edit"> Edit</label>
+                                        </div>
+                                        <div class="form-group checkboxs">
+                                            <input type="checkbox" id="Delete" name="Delete" value="4">
+                                            <label for="Delete"> Delete</label>
+                                        </div>
+                                      </div>
+                                  </div>
+                                </div>
+                                <div class="firstlabel">
+                                   <div class="row">
+                                       <div class="col-lg-6">
+                                           <p>Profit & Loss Account</p>
+                                       </div>
+                                       <div class="col-md-6">
+                                         <div class="form-group checkboxs">
+                                             <input type="checkbox" id="View" name="View" value="1" checked>
+                                             <label for="View"> View</label>
+                                         </div>
+                                         <div class="form-group checkboxs">
+                                             <input type="checkbox" id="Add" name="Add" value="2">
+                                             <label for="Add"> Add</label>
+                                         </div>
+                                         <div class="form-group checkboxs">
+                                             <input type="checkbox" id="Edit" name="Edit" value="3">
+                                             <label for="Edit"> Edit</label>
+                                         </div>
+                                         <div class="form-group checkboxs">
+                                             <input type="checkbox" id="Delete" name="Delete" value="4">
+                                             <label for="Delete"> Delete</label>
+                                         </div>
+                                       </div>
+                                   </div>
+                                 </div>
+                                 <div class="firstlabel">
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <p>Taxes</p>
+                                        </div>
+                                        <div class="col-md-6">
+                                          <div class="form-group checkboxs">
+                                              <input type="checkbox" id="View" name="View" value="1" checked>
+                                              <label for="View"> View</label>
+                                          </div>
+                                          <div class="form-group checkboxs">
+                                              <input type="checkbox" id="Add" name="Add" value="2">
+                                              <label for="Add"> Add</label>
+                                          </div>
+                                          <div class="form-group checkboxs">
+                                              <input type="checkbox" id="Edit" name="Edit" value="3">
+                                              <label for="Edit"> Edit</label>
+                                          </div>
+                                          <div class="form-group checkboxs">
+                                              <input type="checkbox" id="Delete" name="Delete" value="4">
+                                              <label for="Delete"> Delete</label>
+                                          </div>
+                                        </div>
+                                    </div>
+                                  </div>
+                                  <div class="titlepage">
+                                      <div class="row">
+                                          <div class="col-md-6">
+                                              <p><b>Assets</b></p>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <div class="form-group checkboxs">
+                                                <input type="checkbox" id="View" name="View" value="1" checked>
+                                                <label for="View"> View</label>
+                                            </div>
+                                            <div class="form-group checkboxs">
+                                                <input type="checkbox" id="Add" name="Add" value="2">
+                                                <label for="Add"> Add</label>
+                                            </div>
+                                            <div class="form-group checkboxs">
+                                                <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                <label for="Edit"> Edit</label>
+                                            </div>
+                                            <div class="form-group checkboxs">
+                                                <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                <label for="Delete"> Delete</label>
+                                            </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="titlepage">
+                                      <div class="row">
+                                          <div class="col-md-6">
+                                              <p><b>Expenses</b></p>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <div class="form-group checkboxs">
+                                                <input type="checkbox" id="View" name="View" value="1" checked>
+                                                <label for="View"> View</label>
+                                            </div>
+                                            <div class="form-group checkboxs">
+                                                <input type="checkbox" id="Add" name="Add" value="2">
+                                                <label for="Add"> Add</label>
+                                            </div>
+                                            <div class="form-group checkboxs">
+                                                <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                <label for="Edit"> Edit</label>
+                                            </div>
+                                            <div class="form-group checkboxs">
+                                                <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                <label for="Delete"> Delete</label>
+                                            </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="titlepage">
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                              <p><b>Sales</b></p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="firstlabel">
+                                     <div class="row">
+                                         <div class="col-lg-6">
+                                             <p>Customer</p>
+                                         </div>
+                                         <div class="col-md-6">
+                                           <div class="form-group checkboxs">
+                                               <input type="checkbox" id="View" name="View" value="1" checked>
+                                               <label for="View"> View</label>
+                                           </div>
+                                           <div class="form-group checkboxs">
+                                               <input type="checkbox" id="Add" name="Add" value="2">
+                                               <label for="Add"> Add</label>
+                                           </div>
+                                           <div class="form-group checkboxs">
+                                               <input type="checkbox" id="Edit" name="Edit" value="3">
+                                               <label for="Edit"> Edit</label>
+                                           </div>
+                                           <div class="form-group checkboxs">
+                                               <input type="checkbox" id="Delete" name="Delete" value="4">
+                                               <label for="Delete"> Delete</label>
+                                           </div>
+                                         </div>
+                                     </div>
+                                   </div>
+                                   <div class="firstlabel">
+                                      <div class="row">
+                                          <div class="col-lg-6">
+                                              <p>Sales order</p>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <div class="form-group checkboxs">
+                                                <input type="checkbox" id="View" name="View" value="1" checked>
+                                                <label for="View"> View</label>
+                                            </div>
+                                            <div class="form-group checkboxs">
+                                                <input type="checkbox" id="Add" name="Add" value="2">
+                                                <label for="Add"> Add</label>
+                                            </div>
+                                            <div class="form-group checkboxs">
+                                                <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                <label for="Edit"> Edit</label>
+                                            </div>
+                                            <div class="form-group checkboxs">
+                                                <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                <label for="Delete"> Delete</label>
+                                            </div>
+                                          </div>
+                                      </div>
+                                    </div>
+                                    <div class="firstlabel">
+                                       <div class="row">
+                                           <div class="col-lg-6">
+                                               <p>Sales</p>
+                                           </div>
+                                           <div class="col-md-6">
+                                             <div class="form-group checkboxs">
+                                                 <input type="checkbox" id="View" name="View" value="1" checked>
+                                                 <label for="View"> View</label>
+                                             </div>
+                                             <div class="form-group checkboxs">
+                                                 <input type="checkbox" id="Add" name="Add" value="2">
+                                                 <label for="Add"> Add</label>
+                                             </div>
+                                             <div class="form-group checkboxs">
+                                                 <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                 <label for="Edit"> Edit</label>
+                                             </div>
+                                             <div class="form-group checkboxs">
+                                                 <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                 <label for="Delete"> Delete</label>
+                                             </div>
+                                           </div>
+                                       </div>
+                                     </div>
+                                     <div class="firstlabel">
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <p>Sales Return</p>
+                                            </div>
+                                            <div class="col-md-6">
+                                              <div class="form-group checkboxs">
+                                                  <input type="checkbox" id="View" name="View" value="1" checked>
+                                                  <label for="View"> View</label>
+                                              </div>
+                                              <div class="form-group checkboxs">
+                                                  <input type="checkbox" id="Add" name="Add" value="2">
+                                                  <label for="Add"> Add</label>
+                                              </div>
+                                              <div class="form-group checkboxs">
+                                                  <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                  <label for="Edit"> Edit</label>
+                                              </div>
+                                              <div class="form-group checkboxs">
+                                                  <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                  <label for="Delete"> Delete</label>
+                                              </div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="firstlabel">
+                                         <div class="row">
+                                             <div class="col-lg-6">
+                                                 <p>Sales price</p>
+                                             </div>
+                                             <div class="col-md-6">
+                                               <div class="form-group checkboxs">
+                                                   <input type="checkbox" id="View" name="View" value="1" checked>
+                                                   <label for="View"> View</label>
+                                               </div>
+                                               <div class="form-group checkboxs">
+                                                   <input type="checkbox" id="Add" name="Add" value="2">
+                                                   <label for="Add"> Add</label>
+                                               </div>
+                                               <div class="form-group checkboxs">
+                                                   <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                   <label for="Edit"> Edit</label>
+                                               </div>
+                                               <div class="form-group checkboxs">
+                                                   <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                   <label for="Delete"> Delete</label>
+                                               </div>
+                                             </div>
+                                         </div>
+                                       </div>
+                                       <div class="titlepage">
+                                           <div class="row">
+                                               <div class="col-md-12">
+                                                   <p><b>Purchase</b></p>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <div class="firstlabel">
+                                          <div class="row">
+                                              <div class="col-lg-6">
+                                                  <p>Supplier</p>
+                                              </div>
+                                              <div class="col-md-6">
+                                                <div class="form-group checkboxs">
+                                                    <input type="checkbox" id="View" name="View" value="1" checked>
+                                                    <label for="View"> View</label>
+                                                </div>
+                                                <div class="form-group checkboxs">
+                                                    <input type="checkbox" id="Add" name="Add" value="2">
+                                                    <label for="Add"> Add</label>
+                                                </div>
+                                                <div class="form-group checkboxs">
+                                                    <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                    <label for="Edit"> Edit</label>
+                                                </div>
+                                                <div class="form-group checkboxs">
+                                                    <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                    <label for="Delete"> Delete</label>
+                                                </div>
+                                              </div>
+                                          </div>
+                                        </div>
+                                        <div class="firstlabel">
+                                           <div class="row">
+                                               <div class="col-lg-6">
+                                                   <p>Purchase Order</p>
+                                               </div>
+                                               <div class="col-md-6">
+                                                 <div class="form-group checkboxs">
+                                                     <input type="checkbox" id="View" name="View" value="1" checked>
+                                                     <label for="View"> View</label>
+                                                 </div>
+                                                 <div class="form-group checkboxs">
+                                                     <input type="checkbox" id="Add" name="Add" value="2">
+                                                     <label for="Add"> Add</label>
+                                                 </div>
+                                                 <div class="form-group checkboxs">
+                                                     <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                     <label for="Edit"> Edit</label>
+                                                 </div>
+                                                 <div class="form-group checkboxs">
+                                                     <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                     <label for="Delete"> Delete</label>
+                                                 </div>
+                                               </div>
+                                           </div>
+                                         </div>
+                                         <div class="firstlabel">
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <p>Purchase</p>
+                                                </div>
+                                                <div class="col-md-6">
+                                                  <div class="form-group checkboxs">
+                                                      <input type="checkbox" id="View" name="View" value="1" checked>
+                                                      <label for="View"> View</label>
+                                                  </div>
+                                                  <div class="form-group checkboxs">
+                                                      <input type="checkbox" id="Add" name="Add" value="2">
+                                                      <label for="Add"> Add</label>
+                                                  </div>
+                                                  <div class="form-group checkboxs">
+                                                      <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                      <label for="Edit"> Edit</label>
+                                                  </div>
+                                                  <div class="form-group checkboxs">
+                                                      <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                      <label for="Delete"> Delete</label>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                          </div>
+                                          <div class="firstlabel">
+                                             <div class="row">
+                                                 <div class="col-lg-6">
+                                                     <p>Purchase Return</p>
+                                                 </div>
+                                                 <div class="col-md-6">
+                                                   <div class="form-group checkboxs">
+                                                       <input type="checkbox" id="View" name="View" value="1" checked>
+                                                       <label for="View"> View</label>
+                                                   </div>
+                                                   <div class="form-group checkboxs">
+                                                       <input type="checkbox" id="Add" name="Add" value="2">
+                                                       <label for="Add"> Add</label>
+                                                   </div>
+                                                   <div class="form-group checkboxs">
+                                                       <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                       <label for="Edit"> Edit</label>
+                                                   </div>
+                                                   <div class="form-group checkboxs">
+                                                       <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                       <label for="Delete"> Delete</label>
+                                                   </div>
+                                                 </div>
+                                             </div>
+                                           </div>
+                                           <div class="firstlabel">
+                                              <div class="row">
+                                                  <div class="col-lg-6">
+                                                      <p>Purchase Price</p>
+                                                  </div>
+                                                  <div class="col-md-6">
+                                                    <div class="form-group checkboxs">
+                                                        <input type="checkbox" id="View" name="View" value="1" checked>
+                                                        <label for="View"> View</label>
+                                                    </div>
+                                                    <div class="form-group checkboxs">
+                                                        <input type="checkbox" id="Add" name="Add" value="2">
+                                                        <label for="Add"> Add</label>
+                                                    </div>
+                                                    <div class="form-group checkboxs">
+                                                        <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                        <label for="Edit"> Edit</label>
+                                                    </div>
+                                                    <div class="form-group checkboxs">
+                                                        <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                        <label for="Delete"> Delete</label>
+                                                    </div>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="titlepage">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <p><b>Inventory</b></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="firstlabel">
+                                               <div class="row">
+                                                   <div class="col-lg-6">
+                                                       <p>Stock</p>
+                                                   </div>
+                                                   <div class="col-md-6">
+                                                     <div class="form-group checkboxs">
+                                                         <input type="checkbox" id="View" name="View" value="1" checked>
+                                                         <label for="View"> View</label>
+                                                     </div>
+                                                     <div class="form-group checkboxs">
+                                                         <input type="checkbox" id="Add" name="Add" value="2">
+                                                         <label for="Add"> Add</label>
+                                                     </div>
+                                                     <div class="form-group checkboxs">
+                                                         <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                         <label for="Edit"> Edit</label>
+                                                     </div>
+                                                     <div class="form-group checkboxs">
+                                                         <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                         <label for="Delete"> Delete</label>
+                                                     </div>
+                                                   </div>
+                                               </div>
+                                             </div>
+                                             <div class="firstlabel">
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <p>Item group</p>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                      <div class="form-group checkboxs">
+                                                          <input type="checkbox" id="View" name="View" value="1" checked>
+                                                          <label for="View"> View</label>
+                                                      </div>
+                                                      <div class="form-group checkboxs">
+                                                          <input type="checkbox" id="Add" name="Add" value="2">
+                                                          <label for="Add"> Add</label>
+                                                      </div>
+                                                      <div class="form-group checkboxs">
+                                                          <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                          <label for="Edit"> Edit</label>
+                                                      </div>
+                                                      <div class="form-group checkboxs">
+                                                          <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                          <label for="Delete"> Delete</label>
+                                                      </div>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                              <div class="firstlabel">
+                                                 <div class="row">
+                                                     <div class="col-lg-6">
+                                                         <p>Item</p>
+                                                     </div>
+                                                     <div class="col-md-6">
+                                                       <div class="form-group checkboxs">
+                                                           <input type="checkbox" id="View" name="View" value="1" checked>
+                                                           <label for="View"> View</label>
+                                                       </div>
+                                                       <div class="form-group checkboxs">
+                                                           <input type="checkbox" id="Add" name="Add" value="2">
+                                                           <label for="Add"> Add</label>
+                                                       </div>
+                                                       <div class="form-group checkboxs">
+                                                           <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                           <label for="Edit"> Edit</label>
+                                                       </div>
+                                                       <div class="form-group checkboxs">
+                                                           <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                           <label for="Delete"> Delete</label>
+                                                       </div>
+                                                     </div>
+                                                 </div>
+                                               </div>
+                                               <div class="firstlabel">
+                                                  <div class="row">
+                                                      <div class="col-lg-6">
+                                                          <p>Godown</p>
+                                                      </div>
+                                                      <div class="col-md-6">
+                                                        <div class="form-group checkboxs">
+                                                            <input type="checkbox" id="View" name="View" value="1" checked>
+                                                            <label for="View"> View</label>
+                                                        </div>
+                                                        <div class="form-group checkboxs">
+                                                            <input type="checkbox" id="Add" name="Add" value="2">
+                                                            <label for="Add"> Add</label>
+                                                        </div>
+                                                        <div class="form-group checkboxs">
+                                                            <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                            <label for="Edit"> Edit</label>
+                                                        </div>
+                                                        <div class="form-group checkboxs">
+                                                            <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                            <label for="Delete"> Delete</label>
+                                                        </div>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                                <div class="firstlabel">
+                                                   <div class="row">
+                                                       <div class="col-lg-6">
+                                                           <p>Delivery note</p>
+                                                       </div>
+                                                       <div class="col-md-6">
+                                                         <div class="form-group checkboxs">
+                                                             <input type="checkbox" id="View" name="View" value="1" checked>
+                                                             <label for="View"> View</label>
+                                                         </div>
+                                                         <div class="form-group checkboxs">
+                                                             <input type="checkbox" id="Add" name="Add" value="2">
+                                                             <label for="Add"> Add</label>
+                                                         </div>
+                                                         <div class="form-group checkboxs">
+                                                             <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                             <label for="Edit"> Edit</label>
+                                                         </div>
+                                                         <div class="form-group checkboxs">
+                                                             <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                             <label for="Delete"> Delete</label>
+                                                         </div>
+                                                       </div>
+                                                   </div>
+                                                 </div>
+                                                 <div class="firstlabel">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <p>Packing list</p>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                          <div class="form-group checkboxs">
+                                                              <input type="checkbox" id="View" name="View" value="1" checked>
+                                                              <label for="View"> View</label>
+                                                          </div>
+                                                          <div class="form-group checkboxs">
+                                                              <input type="checkbox" id="Add" name="Add" value="2">
+                                                              <label for="Add"> Add</label>
+                                                          </div>
+                                                          <div class="form-group checkboxs">
+                                                              <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                              <label for="Edit"> Edit</label>
+                                                          </div>
+                                                          <div class="form-group checkboxs">
+                                                              <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                              <label for="Delete"> Delete</label>
+                                                          </div>
+                                                        </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="firstlabel">
+                                                     <div class="row">
+                                                         <div class="col-lg-6">
+                                                             <p>Purchase In</p>
+                                                         </div>
+                                                         <div class="col-md-6">
+                                                           <div class="form-group checkboxs">
+                                                               <input type="checkbox" id="View" name="View" value="1" checked>
+                                                               <label for="View"> View</label>
+                                                           </div>
+                                                           <div class="form-group checkboxs">
+                                                               <input type="checkbox" id="Add" name="Add" value="2">
+                                                               <label for="Add"> Add</label>
+                                                           </div>
+                                                           <div class="form-group checkboxs">
+                                                               <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                               <label for="Edit"> Edit</label>
+                                                           </div>
+                                                           <div class="form-group checkboxs">
+                                                               <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                               <label for="Delete"> Delete</label>
+                                                           </div>
+                                                         </div>
+                                                     </div>
+                                                   </div>
+                                                   <div class="titlepage">
+                                                       <div class="row">
+                                                           <div class="col-md-12">
+                                                               <p><b>Installation</b></p>
+                                                           </div>
+                                                       </div>
+                                                   </div>
+                                                   <div class="firstlabel">
+                                                      <div class="row">
+                                                          <div class="col-lg-6">
+                                                              <p>Projects</p>
+                                                          </div>
+                                                          <div class="col-md-6">
+                                                            <div class="form-group checkboxs">
+                                                                <input type="checkbox" id="View" name="View" value="1" checked>
+                                                                <label for="View"> View</label>
+                                                            </div>
+                                                            <div class="form-group checkboxs">
+                                                                <input type="checkbox" id="Add" name="Add" value="2">
+                                                                <label for="Add"> Add</label>
+                                                            </div>
+                                                            <div class="form-group checkboxs">
+                                                                <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                                <label for="Edit"> Edit</label>
+                                                            </div>
+                                                            <div class="form-group checkboxs">
+                                                                <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                                <label for="Delete"> Delete</label>
+                                                            </div>
+                                                          </div>
+                                                      </div>
+                                                    </div>
+                                                    <div class="titlepage">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <p><b>Maintenance</b></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="firstlabel">
+                                                       <div class="row">
+                                                           <div class="col-lg-6">
+                                                               <p>Contracts / AMC</p>
+                                                           </div>
+                                                           <div class="col-md-6">
+                                                             <div class="form-group checkboxs">
+                                                                 <input type="checkbox" id="View" name="View" value="1" checked>
+                                                                 <label for="View"> View</label>
+                                                             </div>
+                                                             <div class="form-group checkboxs">
+                                                                 <input type="checkbox" id="Add" name="Add" value="2">
+                                                                 <label for="Add"> Add</label>
+                                                             </div>
+                                                             <div class="form-group checkboxs">
+                                                                 <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                                 <label for="Edit"> Edit</label>
+                                                             </div>
+                                                             <div class="form-group checkboxs">
+                                                                 <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                                 <label for="Delete"> Delete</label>
+                                                             </div>
+                                                           </div>
+                                                       </div>
+                                                     </div>
+                                                     <div class="firstlabel">
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <p>Call Back</p>
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                              <div class="form-group checkboxs">
+                                                                  <input type="checkbox" id="View" name="View" value="1" checked>
+                                                                  <label for="View"> View</label>
+                                                              </div>
+                                                              <div class="form-group checkboxs">
+                                                                  <input type="checkbox" id="Add" name="Add" value="2">
+                                                                  <label for="Add"> Add</label>
+                                                              </div>
+                                                              <div class="form-group checkboxs">
+                                                                  <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                                  <label for="Edit"> Edit</label>
+                                                              </div>
+                                                              <div class="form-group checkboxs">
+                                                                  <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                                  <label for="Delete"> Delete</label>
+                                                              </div>
+                                                            </div>
+                                                        </div>
+                                                      </div>
+                                                      <div class="firstlabel">
+                                                         <div class="row">
+                                                             <div class="col-lg-6">
+                                                                 <p>Renovation contracts</p>
+                                                             </div>
+                                                             <div class="col-md-6">
+                                                               <div class="form-group checkboxs">
+                                                                   <input type="checkbox" id="View" name="View" value="1" checked>
+                                                                   <label for="View"> View</label>
+                                                               </div>
+                                                               <div class="form-group checkboxs">
+                                                                   <input type="checkbox" id="Add" name="Add" value="2">
+                                                                   <label for="Add"> Add</label>
+                                                               </div>
+                                                               <div class="form-group checkboxs">
+                                                                   <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                                   <label for="Edit"> Edit</label>
+                                                               </div>
+                                                               <div class="form-group checkboxs">
+                                                                   <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                                   <label for="Delete"> Delete</label>
+                                                               </div>
+                                                             </div>
+                                                         </div>
+                                                       </div>
+                                                       <div class="titlepage">
+                                                           <div class="row">
+                                                               <div class="col-md-12">
+                                                                   <p><b>Manufacturing</b></p>
+                                                               </div>
+                                                           </div>
+                                                       </div>
+                                                       <div class="firstlabel">
+                                                          <div class="row">
+                                                              <div class="col-lg-6">
+                                                                  <p>BOM</p>
+                                                              </div>
+                                                              <div class="col-md-6">
+                                                                <div class="form-group checkboxs">
+                                                                    <input type="checkbox" id="View" name="View" value="1" checked>
+                                                                    <label for="View"> View</label>
+                                                                </div>
+                                                                <div class="form-group checkboxs">
+                                                                    <input type="checkbox" id="Add" name="Add" value="2">
+                                                                    <label for="Add"> Add</label>
+                                                                </div>
+                                                                <div class="form-group checkboxs">
+                                                                    <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                                    <label for="Edit"> Edit</label>
+                                                                </div>
+                                                                <div class="form-group checkboxs">
+                                                                    <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                                    <label for="Delete"> Delete</label>
+                                                                </div>
+                                                              </div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="titlepage">
+                                                            <div class="row">
+                                                                <div class="col-md-12">
+                                                                    <p><b>Human Resources</b></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="firstlabel">
+                                                           <div class="row">
+                                                               <div class="col-lg-6">
+                                                                   <p>Employee Details</p>
+                                                               </div>
+                                                               <div class="col-md-6">
+                                                                 <div class="form-group checkboxs">
+                                                                     <input type="checkbox" id="View" name="View" value="1" checked>
+                                                                     <label for="View"> View</label>
+                                                                 </div>
+                                                                 <div class="form-group checkboxs">
+                                                                     <input type="checkbox" id="Add" name="Add" value="2">
+                                                                     <label for="Add"> Add</label>
+                                                                 </div>
+                                                                 <div class="form-group checkboxs">
+                                                                     <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                                     <label for="Edit"> Edit</label>
+                                                                 </div>
+                                                                 <div class="form-group checkboxs">
+                                                                     <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                                     <label for="Delete"> Delete</label>
+                                                                 </div>
+                                                               </div>
+                                                           </div>
+                                                         </div>
+                                                         <div class="firstlabel">
+                                                            <div class="row">
+                                                                <div class="col-lg-6">
+                                                                    <p>Leave Salary</p>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                  <div class="form-group checkboxs">
+                                                                      <input type="checkbox" id="View" name="View" value="1" checked>
+                                                                      <label for="View"> View</label>
+                                                                  </div>
+                                                                  <div class="form-group checkboxs">
+                                                                      <input type="checkbox" id="Add" name="Add" value="2">
+                                                                      <label for="Add"> Add</label>
+                                                                  </div>
+                                                                  <div class="form-group checkboxs">
+                                                                      <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                                      <label for="Edit"> Edit</label>
+                                                                  </div>
+                                                                  <div class="form-group checkboxs">
+                                                                      <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                                      <label for="Delete"> Delete</label>
+                                                                  </div>
+                                                                </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="firstlabel">
+                                                             <div class="row">
+                                                                 <div class="col-lg-6">
+                                                                     <p>Service</p>
+                                                                 </div>
+                                                                 <div class="col-md-6">
+                                                                   <div class="form-group checkboxs">
+                                                                       <input type="checkbox" id="View" name="View" value="1" checked>
+                                                                       <label for="View"> View</label>
+                                                                   </div>
+                                                                   <div class="form-group checkboxs">
+                                                                       <input type="checkbox" id="Add" name="Add" value="2">
+                                                                       <label for="Add"> Add</label>
+                                                                   </div>
+                                                                   <div class="form-group checkboxs">
+                                                                       <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                                       <label for="Edit"> Edit</label>
+                                                                   </div>
+                                                                   <div class="form-group checkboxs">
+                                                                       <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                                       <label for="Delete"> Delete</label>
+                                                                   </div>
+                                                                 </div>
+                                                             </div>
+                                                           </div>
+                                                           <div class="titlepage">
+                                                               <div class="row">
+                                                                   <div class="col-md-12">
+                                                                       <p><b>Training Institute</b></p>
+                                                                   </div>
+                                                               </div>
+                                                           </div>
+                                                           <div class="firstlabel">
+                                                              <div class="row">
+                                                                  <div class="col-lg-6">
+                                                                      <p>Students</p>
+                                                                  </div>
+                                                                  <div class="col-md-6">
+                                                                    <div class="form-group checkboxs">
+                                                                        <input type="checkbox" id="View" name="View" value="1" checked>
+                                                                        <label for="View"> View</label>
+                                                                    </div>
+                                                                    <div class="form-group checkboxs">
+                                                                        <input type="checkbox" id="Add" name="Add" value="2">
+                                                                        <label for="Add"> Add</label>
+                                                                    </div>
+                                                                    <div class="form-group checkboxs">
+                                                                        <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                                        <label for="Edit"> Edit</label>
+                                                                    </div>
+                                                                    <div class="form-group checkboxs">
+                                                                        <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                                        <label for="Delete"> Delete</label>
+                                                                    </div>
+                                                                  </div>
+                                                              </div>
+                                                            </div>
+                                                            <div class="firstlabel">
+                                                               <div class="row">
+                                                                   <div class="col-lg-6">
+                                                                       <p>Courses</p>
+                                                                   </div>
+                                                                   <div class="col-md-6">
+                                                                     <div class="form-group checkboxs">
+                                                                         <input type="checkbox" id="View" name="View" value="1" checked>
+                                                                         <label for="View"> View</label>
+                                                                     </div>
+                                                                     <div class="form-group checkboxs">
+                                                                         <input type="checkbox" id="Add" name="Add" value="2">
+                                                                         <label for="Add"> Add</label>
+                                                                     </div>
+                                                                     <div class="form-group checkboxs">
+                                                                         <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                                         <label for="Edit"> Edit</label>
+                                                                     </div>
+                                                                     <div class="form-group checkboxs">
+                                                                         <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                                         <label for="Delete"> Delete</label>
+                                                                     </div>
+                                                                   </div>
+                                                               </div>
+                                                             </div>
+                                                             <div class="titlepage">
+                                                                 <div class="row">
+                                                                     <div class="col-md-12">
+                                                                         <p><b>Software development</b></p>
+                                                                     </div>
+                                                                 </div>
+                                                             </div>
+                                                             <div class="firstlabel">
+                                                                <div class="row">
+                                                                    <div class="col-lg-6">
+                                                                        <p>Contracts</p>
+                                                                    </div>
+                                                                    <div class="col-md-6">
+                                                                      <div class="form-group checkboxs">
+                                                                          <input type="checkbox" id="View" name="View" value="1" checked>
+                                                                          <label for="View"> View</label>
+                                                                      </div>
+                                                                      <div class="form-group checkboxs">
+                                                                          <input type="checkbox" id="Add" name="Add" value="2">
+                                                                          <label for="Add"> Add</label>
+                                                                      </div>
+                                                                      <div class="form-group checkboxs">
+                                                                          <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                                          <label for="Edit"> Edit</label>
+                                                                      </div>
+                                                                      <div class="form-group checkboxs">
+                                                                          <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                                          <label for="Delete"> Delete</label>
+                                                                      </div>
+                                                                    </div>
+                                                                </div>
+                                                              </div>
+                                                              <div class="titlepage">
+                                                                  <div class="row">
+                                                                      <div class="col-md-6">
+                                                                          <p><b>Budgeting</b></p>
+                                                                      </div>
+                                                                      <div class="col-md-6">
+                                                                        <div class="form-group checkboxs">
+                                                                            <input type="checkbox" id="View" name="View" value="1" checked>
+                                                                            <label for="View"> View</label>
+                                                                        </div>
+                                                                        <div class="form-group checkboxs">
+                                                                            <input type="checkbox" id="Add" name="Add" value="2">
+                                                                            <label for="Add"> Add</label>
+                                                                        </div>
+                                                                        <div class="form-group checkboxs">
+                                                                            <input type="checkbox" id="Edit" name="Edit" value="3">
+                                                                            <label for="Edit"> Edit</label>
+                                                                        </div>
+                                                                        <div class="form-group checkboxs">
+                                                                            <input type="checkbox" id="Delete" name="Delete" value="4">
+                                                                            <label for="Delete"> Delete</label>
+                                                                        </div>
+                                                                      </div>
+                                                                  </div>
+                                                              </div>
+                            </div>
+                              <!-- end card-body -->
+                           </div>
+                           <!-- end card-->
+                        </div>
+                        <!-- end col -->
+                        <div class="col-3">
+                           <div class="card">
+                              <div class="card-body">
+                                 <h4>Attributes</h4>
+                                 <hr>
+                                 <button type="submit" class="btn btn-primary">Submit</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!-- end row -->
+                  </form>
+               </div>
+               <!-- container -->
+            </div>
+            <!-- content -->
+            <!-- Footer Start -->
+            <footer class="footer">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <script>document.write(new Date().getFullYear())</script>  Copyright &copy; 2021 Zoios, All rights reserved. 
+                     </div>
+                     <div class="col-md-6">
+                        <div class="text-md-end footer-links d-none d-sm-block">
+                           <a href="javascript:void(0);">About Us</a>
+                           <a href="javascript:void(0);">Help</a>
+                           <a href="javascript:void(0);">Contact Us</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </footer>
+            <!-- end Footer -->
+         </div>
+         <!-- ============================================================== -->
+         <!-- End Page content -->
+         <!-- ============================================================== -->
+      </div>
+      <!-- END wrapper -->
+      <!-- /Right-bar -->
+      <!-- Vendor js -->
+      <script src="assets/js/vendor.min.js"></script>
+      <!-- optional plugins -->
+      <script src="assets/libs/moment/min/moment.min.js"></script>
+      <script src="assets/libs/apexcharts/apexcharts.min.js"></script>
+      <script src="assets/libs/flatpickr/flatpickr.min.js"></script>
+      <!-- third party js -->
+      <script src="assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
+      <script src="assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+      <script src="assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+      <script src="assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
+      <script src="assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+      <script src="assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+      <script src="assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
+      <script src="assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
+      <script src="assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
+      <script src="assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+      <script src="assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
+      <!-- third party js ends -->
+      <!-- Datatables init -->
+      <script src="assets/js/pages/datatables.init.js"></script>
+      <!-- page js -->
+      <script src="assets/js/pages/dashboard.init.js"></script>
+      <!-- App js -->
+      <script src="assets/js/app.min.js"></script>
+   </body>
+</html>

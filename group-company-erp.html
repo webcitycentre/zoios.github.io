@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Zoios | Main Page</title>
+  <link href="static/plugin/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">
+  <link href="static/plugin/themify-icons/themify-icons.css" rel="stylesheet">
+  <link href="static/plugin/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/plugin/owl-carousel/css/owl.carousel.min.css" rel="stylesheet">
+  <link href="static/plugin/magnific/magnific-popup.css" rel="stylesheet">
+  <link href="static/css/styles.css" rel="stylesheet">
+  <link href="static/css/color/default.css" rel="stylesheet" id="color_theme">
+  <link rel="icon" href="static/img/favicon.png" />
+</head>
+<body data-spy="scroll" data-target="#navbar" data-offset="98">
+  <div id="loading">
+    <div class="load-circle"><span class="one"></span></div>
+  </div>
+  <main> 
+    <section class="loginpage">
+      <div class="container">
+        <div class="loginsection">
+          <div class="row">
+            <div class="col-md-2">
+              <div class="logologin">
+                <a href="index.html"><img src="static/img/logo.png"></a>
+              </div>
+            </div>
+            <div class="col-md-10 text-right">
+             <!-- <div class="loginsing">
+                <p><span>Already Have Account? <a href="login.html">Login</a></span></p>
+              </div>-->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 align-self-center">
+              <div class="loginimg">
+                <img src="static/img/banner.png">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="lgoinform">
+                <div class="loginheading">
+                  <h2>ERP Form!</h2>
+                </div>
+                  <form method="post" action="">
+                      <div class="row">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                <select type="text" class="form-control select-form multiselect" multiple="multiple" id="companys" role="multiselect">  
+                                  <option value="Company 1">Company 1</option>
+                                  <option value="Company 2">Company 2</option>
+                                  <option value="Company 3">Company 3</option>
+                                  <option value="Company 4">Company 4</option>
+                                  <option value="Company 5">Company 5</option>
+                                  <option value="Company 6">Company 6</option>
+                                  <option value="Company 7">Company 7</option>
+                                  <option value="Company 8">Company 8</option>
+                                  <option value="Company 9">Company 9</option>
+                                  <option value="Company 10">Company 10</option>
+                                </select> 
+                              </div>
+                          </div>
+                          <div class="col-md-12 companynames"></div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <button type="button" class="form-submitbtn" onclick="document.location='erp.html'">Back</button>
+                            </div>
+                          </div>
+                          <div class="col-md-6 text-right">
+                            <div class="form-group">
+                              <button type="submit" class="form-submitbtn">Submit</button>
+                            </div>
+                          </div>
+                      </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- Main End -->
+
+  
+
+  <!-- jQuery -->
+  <script src="static/js/jquery-3.2.1.min.js"></script>
+  <script src="static/js/jquery-migrate-3.0.0.min.js"></script>
+  <script src="static/plugin/bootstrap/js/popper.min.js"></script>
+  <script src="static/plugin/bootstrap/js/bootstrap.min.js"></script>
+  <script src="static/plugin/owl-carousel/js/owl.carousel.min.js"></script>
+  <script src="static/plugin/magnific/jquery.magnific-popup.min.js"></script>
+  <script src="static/plugin/particles/particles.min.js"></script>
+  <script src="static/plugin/particles/particles-app.js"></script>
+  <script src="static/js/custom.js"></script>
+ <script src="static/js/form.js"></script>
+ <script>
+   //var total = $("#companys :selected").length;
+  $('#companys').change(function(){
+    var total = $("#companys :not(:selected)").length;
+    //alert(total);
+    //alert($(this).val().length);
+    var wrapper = $('.companynames'); 
+    var fieldHTML = '<div class="form-group"><input type="text" class="form-control removegapp" name="companyname[]" placeholder="Company name" required></div>';
+    var x = $(this).val().length; 
+    if(x < total){
+      //alert("plus"); die;
+      x++; 
+      $(wrapper).append(fieldHTML);
+    } else if(x > total) {
+      alert("neg"); die;
+      $(this).parent('div').remove(); 
+        x--;
+    }
+  })
+ </script>
+</body>
+</html>

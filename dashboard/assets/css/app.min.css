@@ -4905,4 +4905,7 @@ span.flatpickr-weekday {
 .maintitless {
     cursor: pointer;
 }
+.text-right {
+    text-align: right;
+}
 /*# sourceMappingURL=app.min.css.map */
